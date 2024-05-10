@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="min-width, initial-scale=1">
+        <meta name="description" content="">
+        <title>login</title>
+        <link href="assets/distr/css/bootstrap.min.css" rel="stylesheet">
+        <!-- fevicon -->
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <link rel="icon" href="img/logo.png" type="img/logo.png" sizes="32x32"/>
+    </head>
+    <body style="background-color: rgb(252, 252, 252);">
+        <h2 style="text-align: center;">Login Page</h2>
+        <div class="" style="width: 400px; height: 500px; margin-left: auto; margin-right: auto;">
+            <div class="row-bottom-padded-md" style="background-color: rgb(172, 169, 169);">
+                <div class="" style="margin-top: 50px;">
+                    <form action="submit.html" method="post" id="fm">
+                        <div class="form-group">
+                            <label for="uname"><b>Username</b></label>
+                            <input type="text" id="username" class="form-control" placeholder="Enter Username" name="uname">
+                        </div>
+                        <div class="form-group">
+                            <label for="psw"><b>Password</b></label>
+                            <input type="password" id="password" class="form-control" placeholder="Enter Password" name="psw required">
+
+                        </div>
+                        <div>
+                            <button id="login" type="button" onclick="validateFields(this)"><a href="index.html">Login</a></button>
+                        </div>
+                        <label><input type="checkbox" checked="checked" name="remember">Remember me</label>
+                        <div style="background-color: darkgray;">
+                            <button type="button" id="cancelButton">Cancel</button>
+                            <span class="psw"><a href="#">Forget Password?</a></span>
+                        </div>
+
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+        <script>
+            function validateFields(button){
+                let username = document.getElementById("username");
+                let password = document.getElementById("password");
+                if (username.value != 'Godswill'){
+                    alert('Username incorrect!');
+                }else if (password.value !='12345'){
+                    alert ('Password incorrect');
+                }else {
+                    let submitlink = button.getElementById('a')[0];
+                }
+            }
+        </script>
+        <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+
+        <script>
+            document.getElementById("cancelButton").addEventListener("click", function() {
+  // Clear form fields
+  document.getElementById("fm").reset(); // Replace "formName" with the ID of your form
+  
+  // Optionally, close the form or navigate away
+  // Example: close a modal
+  // document.getElementById("myModal").style.display = "none";
+  
+  // Example: navigate to a different page
+  // window.location.href = "home.html";
+});
+        </script>
+
+    </body>
+</html>
